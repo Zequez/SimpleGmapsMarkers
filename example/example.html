@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Gmaps Markers Example</title>
+    <link href="example-css" ref="stylesheet" type="text/css" media="screen"/>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/path/to/google_maps_marker.min.js"></script>
+    <script>
+        var init = function(){
+            new SimpleGmapsMarkers();
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="simple-gmaps">
+        <div class="simple-gmaps-label" data-lat="-37.123123" data-lng="-58.4324234">
+            This is a bear
+        </div>
+        <div class="simple-gmaps-label" data-lat="-37.123123" data-lng="-58.4324234" data-marker="marker-bear">
+            This is also a bear!
+        </div>
+        <div class="simple-gmaps-label" data-lat="-37.523123" data-lng="-58.4324234" data-marker="marker-whale">
+            This is a whale
+        </div>
+        <div class="simple-gmaps-marker marker-bear"></div>
+        <div class="simple-gmaps-marker marker-blue"></div>
+    </div>
+</body>
+</html>

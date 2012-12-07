@@ -1,0 +1,24 @@
+.simple-gmaps {
+    width: 500px;
+    height: 500px;
+}
+
+.simple-gmaps-label {
+    width: 150px;
+
+    border: solid 1px #5b914b;
+    border-radius: 2px;
+
+    background: #68a656;
+
+    color: white;
+    text-align: center;
+}
+
+.simple-gmaps-marker.marker-bear {
+    background-image: url(bear-marker.png);
+}
+
+.simple-gmaps-marker.marker-whale {
+    background-image: url(whale-marker.png);
+}

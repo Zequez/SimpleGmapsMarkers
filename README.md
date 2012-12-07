@@ -17,10 +17,21 @@ the following script on the webpage:
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 ```
 
-And then the Simple Gmaps Markers library
+If you are already running jQuery then you can use the autorun library:
+
+```html
+<script type="text/javascript" src="/path/to/google_maps_marker.jquery.autorun.min.js"></script>
+```
+
+If not, you have to execute Simple Gmaps Markers manually:
 
 ```html
 <script type="text/javascript" src="/path/to/google_maps_marker.min.js"></script>
+<script type="text/javascript">
+  var onload = function(){
+    new SimpleGmapsMarkers('simple-gmaps', {});
+  };
+</script>
 ```
 
 ## The HTML tag
@@ -45,10 +56,10 @@ Then you just need to style the `simple-gmaps-label` and `simple-gmaps-marker` c
 There is just one rule to style the `simple-gmaps-marker`, you must set the `background-image`.
 Then you can also add optionals:
 
-  * `height` (default 50px)
-  * `width` (default 25px)
-  * `margin-top` (default -50px)
-  * `margin-left` (default -13px)
+  * `height` (default 37px)
+  * `width` (default 32px)
+  * `margin-top` (default -37px)
+  * `margin-left` (default -17px)
 
 *Remember: the CSS of the marker is just to pass information,
 the actual marker won't have the CSS class or any other property*
@@ -110,6 +121,10 @@ The JavaScript way:
   # Or you can also
 
   new SimpleGmapsMarker(document.getElementsByClassName('simple-gmaps', {}));
+
+  # And because those are defaults, it's the same as:
+
+  new SimpleGmapsMarker();
 ```
 
 And the jQuery way:
