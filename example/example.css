@@ -3,8 +3,34 @@
     height: 500px;
 }
 
-.simple-gmaps-label {
+.simple-gmaps-marker {
+    position: relative;
+
+    height: 37px;
+    width: 32px;
+
+    margin-top: -37px;
+    margin-left: -16px;
+
+    background-image: url(bear-marker.png);
+}
+
+.simple-gmaps-marker.icon-whale {
+    background-image: url(whale-marker.png);
+}
+
+
+.simple-gmaps-marker .my-label {
+    display: none;
+
+    position: absolute;
+
+    bottom: 40px;
+    left: 50%;
+
     width: 150px;
+
+    margin-left: -75px;
 
     border: solid 1px #5b914b;
     border-radius: 2px;
@@ -13,12 +39,16 @@
 
     color: white;
     text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 30px;
 }
 
-.simple-gmaps-marker.marker-bear {
-    background-image: url(bear-marker.png);
+.simple-gmaps-marker:hover .my-label {
+    /*display: block;*/
+    cursor: pointer;
 }
 
-.simple-gmaps-marker.marker-whale {
-    background-image: url(whale-marker.png);
+.simple-gmaps-marker.active .my-label {
+    display: block;
 }
