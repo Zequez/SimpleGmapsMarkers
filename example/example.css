@@ -3,7 +3,7 @@
     height: 500px;
 }
 
-.simple-gmaps-marker {
+.my-marker {
     position: relative;
 
     height: 37px;
@@ -15,12 +15,12 @@
     background-image: url(bear-marker.png);
 }
 
-.simple-gmaps-marker.icon-whale {
+.my-marker.icon-whale {
     background-image: url(whale-marker.png);
 }
 
 
-.simple-gmaps-marker .my-label {
+.my-marker .my-label {
     display: none;
 
     position: absolute;
@@ -44,11 +44,11 @@
     line-height: 30px;
 }
 
-.simple-gmaps-marker:hover .my-label {
+.my-marker:hover .my-label {
     display: block;
     cursor: pointer;
 }
 
-.simple-gmaps-marker.active .my-label {
+.my-marker.active .my-label {
     display: block;
 }

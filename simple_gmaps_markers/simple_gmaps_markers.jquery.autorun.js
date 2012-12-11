@@ -23,7 +23,7 @@ window.InfoBox = InfoBox;
 
     SimpleGmapsMarkers.prototype.findElements = function() {
       this.element = $(this.element);
-      return this.markers_elements = this.element.find('.simple-gmaps-marker').remove();
+      return this.markers_elements = this.element.find('[data-lat]').remove();
     };
 
     SimpleGmapsMarkers.prototype.buildMarkers = function() {

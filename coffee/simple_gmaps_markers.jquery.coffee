@@ -12,7 +12,7 @@ class SimpleGmapsMarkers
 
   findElements: ->
     @element = $(@element)
-    @markers_elements = @element.find('.simple-gmaps-marker').remove()
+    @markers_elements = @element.find('[data-lat]').remove()
 
   buildMarkers: ->
     @markers = for marker_element in @markers_elements

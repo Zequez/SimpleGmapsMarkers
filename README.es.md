@@ -55,6 +55,22 @@ el mouse sobre la posición y presiona SHIFT.
 
 Se explica solo, simplemente agrega múltiples `simple-gmaps-marker`.
 
+## About the CSS
+
+Solo está la siguiente simple regla, no puedes seleccionar los elementos
+haciendo lo siguiente:
+
+```css
+.simple-gmaps > div {
+
+}
+
+```
+
+Porque los elementos son removidos del DOM e insertados dentro de una jungla de DOM de Google Maps.
+
+Y otra cosa, puedes usar la clase `.active` en tu CSS para seleccionar el último elemento clickeado.
+
 ## Autorun o manual
 
 Si lo quieres hacer lo más simple posible, sin escribir
@@ -79,3 +95,4 @@ Que es prácticamente lo mismo que hacer lo siguiente:
 
 By [Ezequiel Schwartzman](http://zequez.com), at [Avalith](http://avalith.net/).
 
+[Librería Infobox](https://code.google.com/p/google-maps-utility-library-v3/) para la API de Google Maps.

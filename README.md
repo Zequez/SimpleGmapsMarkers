@@ -29,7 +29,7 @@ Then include the following HTML in any part of your website:
 
 ```html
 <div class="simple-gmaps">
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="my-marker" data-lat="-37.123123" data-lng="-58.4324234">
     That's it, this is an stylable element.
   </div>
 </div>
@@ -44,16 +44,31 @@ part of the map.
 
 ```html
 <div class="simple-gmaps">
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="my-marker" data-lat="-37.123123" data-lng="-58.4324234">
     It couldn't get
   </div>
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="other-marker" data-lat="-37.123123" data-lng="-58.4324234">
     any simpler than this
   </div>
 </div>
 ```
 
-It's pretty much self-explanatory, you add multiple `simple-gmaps-marker`.
+It's pretty much self-explanatory, you add multiple elements with `data-lat` and `data-lng`.
+
+## About the CSS
+
+There is just this simple rule, you can't match the elements doing:
+
+```css
+.simple-gmaps > div {
+
+}
+
+```
+
+Because the elements are removed from DOM and inserted inside a jungle of Google Maps DOM elements.
+
+And another thing, you can use the class `.active` in your CSS, it will match the last clicked element.
 
 ## Autorun or manual
 
@@ -79,3 +94,4 @@ Doing that is the same as:
 
 By [Ezequiel Schwartzman](http://zequez.com), at [Avalith](http://avalith.net/).
 
+[Infobox libraray](https://code.google.com/p/google-maps-utility-library-v3/) for Google Maps API
