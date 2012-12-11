@@ -45,7 +45,7 @@
 }
 
 .simple-gmaps-marker:hover .my-label {
-    /*display: block;*/
+    display: block;
     cursor: pointer;
 }
 

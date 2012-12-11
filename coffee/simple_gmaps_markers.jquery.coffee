@@ -1,6 +1,8 @@
+#= require infobox_packed
+
 $ = jQuery;
 
-class SimpleGmapsMarker
+class SimpleGmapsMarkers
   constructor: (@element, @options)->
     @findElements()
     @buildGmap()
@@ -41,28 +43,16 @@ class SimpleGmapsMarker
 
   fitMap: ->
     @gmap.fitBounds @bounds()
-    console.log @gmap.getZoom()
     listener = google.maps.event.addListener @gmap, "idle", =>
       @gmap.setZoom(14) if @gmap.getZoom() > 14
       google.maps.event.removeListener(listener)
 
 class Marker
   constructor: (@element, @gmap)->
-    @buildMarker()
     @buildInfobox()
     @bindInfobox()
 
   onClick: (@callbackClick)->
-
-  buildMarker: ->
-    @marker = new google.maps.Marker @markerOptions()
-
-  markerOptions: ->
-    {
-      map: @gmap
-      position: @latlng()
-      icon: new google.maps.MarkerImage('1x1t.gif')
-    }
 
   latlng: -> @_latlng or= new google.maps.LatLng @lat(), @lng()
   lat: -> parseFloat @element.attr('data-lat')
@@ -70,13 +60,17 @@ class Marker
 
   buildInfobox: ->
     @infobox = new InfoBox @infoboxOptions()
-    @infobox.open @gmap, @marker
+    @infobox.open @gmap #, @marker
 
   infoboxOptions: ->
     {
       content: @element[0],
       closeBoxURL: '',
       alignBottom: true,
+      isHidden: false,
+      pane: 'floatPane',
+      position: @latlng(),
+      enableEventPropagation: false
     }
 
   bindInfobox: ->
@@ -97,6 +91,6 @@ class Marker
 
 
 $.fn.extend
-  simpleGmapsMarker: (options)->
+  simpleGmapsMarkers: (options)->
     this.each ->
-      $(this).data 'simpleGmapsMarker', new SimpleGmapsMarker(this, options);
+      $(this).data 'simpleGmapsMarkers', new SimpleGmapsMarkers(this, options);

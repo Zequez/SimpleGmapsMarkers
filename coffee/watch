@@ -1,0 +1,2 @@
+#!/bin/sh
+coffee -wcj "../simple_gmaps_markers/simple_gmaps_markers.jquery.js" infobox_packed.coffee simple_gmaps_markers.jquery.coffee
