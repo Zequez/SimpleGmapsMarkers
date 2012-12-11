@@ -1,6 +1,6 @@
 # Simple Gmaps Markers
 
-Simple Gmaps Markers is a little useful library to create map with a custom
+Simple Gmaps Markers is a little useful library to create a Google Maps map with a custom
 marker and label without having to write a single line of JavaScript.
 
 This is a heavily used feature that often is done by using the default iframe

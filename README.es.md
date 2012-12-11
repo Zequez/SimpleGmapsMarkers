@@ -1,6 +1,6 @@
 # Simple Gmaps Markers
 
-Simple Gmaps Markers es una pequeña libraría para crear un marcador customizado
+Simple Gmaps Markers es una pequeña libraría para crear marcadores customizados
 de Google Maps sin tener que escribir ni una sola linea de JavaScript.
 
 Esto es algo muy utilizado en muchos sitios web, algo que debería ser simple, pero
