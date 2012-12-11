@@ -93,6 +93,6 @@ Que es prácticamente lo mismo que hacer lo siguiente:
 
 ## Créditos
 
-By [Ezequiel Schwartzman](http://zequez.com), at [Avalith](http://avalith.net/).
+Por [Ezequiel Schwartzman](http://zequez.com), en [Avalith](http://avalith.net/).
 
 [Librería Infobox](https://code.google.com/p/google-maps-utility-library-v3/) para la API de Google Maps.
