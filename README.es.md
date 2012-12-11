@@ -30,7 +30,7 @@ Luego incluye el siguiente HTML en cualquier parte de ti sitio web:
 
 ```html
 <div class="simple-gmaps">
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="my-marker" data-lat="-37.123123" data-lng="-58.4324234">
     Listo, cualquier cosa que pongas acá dentro se puede estilar con CSS.
   </div>
 </div>
@@ -44,10 +44,10 @@ el mouse sobre la posición y presiona SHIFT.
 
 ```html
 <div class="simple-gmaps">
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="my-marker" data-lat="-37.123123" data-lng="-58.4324234">
     No podría ser
   </div>
-  <div class="simple-gmaps-marker" data-lat="-37.123123" data-lng="-58.4324234">
+  <div class="my-marker" data-lat="-37.123123" data-lng="-58.4324234">
     más simple que esto
   </div>
 </div>
