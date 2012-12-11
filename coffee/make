@@ -1,3 +1,5 @@
 #!/bin/sh
 coffee -cj "../simple_gmaps_markers/simple_gmaps_markers.jquery.js" infobox_packed.coffee simple_gmaps_markers.jquery.coffee
 coffee -cj "../simple_gmaps_markers/simple_gmaps_markers.jquery.autorun.js" infobox_packed.coffee simple_gmaps_markers.jquery.coffee simple_gmaps_markers.jquery.autorun.coffee
+uglifyjs -o ../simple_gmaps_markers/simple_gmaps_markers.jquery.min.js ../simple_gmaps_markers/simple_gmaps_markers.jquery.js
+uglifyjs -o ../simple_gmaps_markers/simple_gmaps_markers.jquery.autorun.min.js ../simple_gmaps_markers/simple_gmaps_markers.jquery.autorun.js
